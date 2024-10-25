@@ -43,3 +43,7 @@
   .menu-content a:hover {
     background-color: #f1f1f1;
   }
+
+  .blue-text {
+    color: rgb(21, 237, 230);
+  }
