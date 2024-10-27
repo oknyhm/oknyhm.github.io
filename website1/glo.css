@@ -106,14 +106,33 @@ body, html {
       display: none;
       flex-direction: column;
       width: 100%;
+      position: absolute;
+      top: 60px; /* 根据navbar的高度调整 */
+      left: 0;
+      background-color: #333;
+      height: 100vh; /* 使菜单在小屏幕上全屏显示 */
+  }
+
+  .menu2.active {
+      display: flex;
   }
 
   .menu2 li {
       text-align: center;
       padding: 10px;
+      border-bottom: 1px solid #444; /* 为菜单项添加边界 */
   }
 
   .toggle-button {
       display: block;
   }
+}
+
+.menu2 {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.menu2.active {
+  transform: translateY(0);
 }
