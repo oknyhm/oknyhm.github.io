@@ -9,12 +9,10 @@ function toggleMenu() {
 //分割线-------------------------------------------------
 
 document.querySelector('.toggle-button').addEventListener('click', () => {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
-});
-
-window.addEventListener('click', (e) => {
-  if (!document.querySelector('.toggle-button').contains(e.target) && !document.querySelector('.menu').contains(e.target)) {
-      document.querySelector('.menu').classList.remove('active');
+  const menu2 = document.querySelector('.menu2');
+  if (menu2.style.display === 'flex') {
+      menu2.style.display = 'none';
+  } else {
+      menu2.style.display = 'flex';
   }
 });
