@@ -119,3 +119,10 @@ body, html {
       display: block;
   }
 }
+
+
+
+.animated-image {
+  width: 300px; /* 或者你想要的宽度 */
+  height: auto; /* 保持宽高比 */
+}
