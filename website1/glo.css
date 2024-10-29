@@ -141,9 +141,11 @@ body, html {
 }
 
 .still-image270 {
-  width: 200px; /* 或者你想要的宽度 */
+  width: 40%; /* 或者你想要的宽度 */
   height: auto; /* 保持宽高比 */
+  position:relative;
   transform:rotate(270deg);
+  overflow: hidden; 
 }
 
 img.rotated{
