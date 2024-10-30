@@ -22,6 +22,7 @@
   background-size:cover;
   background-blend-mode: multiply;
   background-attachment:fixed;
+
 }
 
 .container2 {
@@ -36,6 +37,26 @@
   background-blend-mode: multiply;
   background-attachment:scroll;
 }
+
+.body-container {
+  display: flex;
+  color:aliceblue;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position:fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  z-index: 999;
+  overflow: hidden; /* 防止滚动条出现 */
+}
+
+
 
 .menu-content {
   display: none;
@@ -82,7 +103,7 @@ body, html {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .logo {
@@ -156,3 +177,20 @@ a:link{color:#a8dee6;}
 a:visited{color:#f8c4fce4;}
 a:hover{color:#44dca7;}
 a:active{color:#eb9a0e;}
+
+
+.popup {
+  display: block; /* Set to block to auto-show */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: 400px; /* Increased width to accommodate images */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;/*图层非常高*/
+  max-height:max-content; /* Limit the maximum height of the popup */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
