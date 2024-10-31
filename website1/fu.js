@@ -106,6 +106,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   }
 } else {
   alert("准备好光速飞船吧");
+  window.close();
 
   //closePopup(); // 关闭第一个弹窗
   //if (containerToDelete) {
