@@ -57,6 +57,25 @@
   overflow: hidden; /* 防止滚动条出现 */
 }
 
+.body-container2 {
+  display: flex;
+  color:aliceblue;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position:fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.4) url("aw.jpg") no-repeat center center;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  z-index: 998;
+  overflow: hidden; /* 防止滚动条出现 */
+}
+
 
 
 .menu-content {
@@ -104,7 +123,7 @@ body, html {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999;
+  z-index: 997;
 }
 
 .logo {
@@ -211,7 +230,28 @@ a:active{color:#eb9a0e;}
 .image-option input[type="checkbox"] {
   margin-right: 10px;
 }
-.image-option img {
+.image-option img  {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+
+
+
+.image-options2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping to multiple lines if needed */
+}
+.image-option2 {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.image-option2 input[type="checkbox"] {
+  margin-right: 10px;
+}
+.image-option2 img  {
   width: 50px; /* Adjust the width as needed */
   height: auto;
 }
