@@ -51,6 +51,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  background: rgba(0, 0, 0, 0.4) url("mc.png") no-repeat center center;
   background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
   z-index: 999;
   overflow: hidden; /* 防止滚动条出现 */
@@ -179,7 +180,7 @@ a:hover{color:#44dca7;}
 a:active{color:#eb9a0e;}
 
 
-.popup {
+.popup,.popup2,.popup3 {
   display: block; /* Set to block to auto-show */
   position: absolute;
   top: 50%;
