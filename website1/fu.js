@@ -36,8 +36,8 @@ function submitInput() {
   const containerToDelete = document.getElementById('containerToDelete');
   const containerToDelete2 = document.getElementById('containerToDelete2');
 
-  alert("您输入的信息是: " + userInput.value);
-
+  //alert("您输入的信息是: " + userInput.value);
+  alert("信息分析中......");
 
   document.querySelectorAll('input[name="image"]:checked').forEach(checkbox => {
     selectedImages.push(checkbox.value);
@@ -59,7 +59,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
       containerToDelete2.remove(); // 移除第二个容器
   }
 } else {
-  alert("你的机械成分疑似有点高");
+  alert("你的机械成分疑似过高");
   closePopup(); // 关闭第一个弹窗
   if (containerToDelete) {
       containerToDelete.remove(); // 移除第一个容器
