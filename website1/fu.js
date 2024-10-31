@@ -74,7 +74,7 @@ function submitInput2() {
   const userInput2 = document.getElementById('userInput2');
   const containerToDelete2 = document.getElementById('containerToDelete2');
 
-  alert("您输入的信息是: " + userInput2.value);
+  alert("信息分析中......");
 
 
   document.querySelectorAll('input[name="image"]:checked').forEach(checkbox => {
@@ -90,14 +90,14 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
 //      containerToDelete.remove(); // 移除第一个容器
 //  }
   if (userInput2) {
-      alert("第二个输入框的信息是: " + userInput2.value);
+      alert("你 过 关 !");
   }
   closePopup2(); // 关闭第二个弹窗
   if (containerToDelete2) {
       containerToDelete2.remove(); // 移除第二个容器
   }
 } else {
-  alert("请确保您选择了正确的5个图片。");
+  alert("准备好光速飞船吧");
 
   //closePopup(); // 关闭第一个弹窗
   //if (containerToDelete) {
