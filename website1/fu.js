@@ -78,7 +78,7 @@ function submitInput2() {
   const containerToDelete2 = document.getElementById('containerToDelete2');
   const container11 = document.getElementById('container11');
   const container22 = document.getElementById('container22');
-
+  const button = document.getElementById('myButton');
   alert("信息分析中......");
 
 
@@ -106,6 +106,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   }
 } else {
   alert("准备好光速飞船吧");
+button.remove();
   window.close();
 
   //closePopup(); // 关闭第一个弹窗
