@@ -50,6 +50,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   closePopup(); // 关闭第一个弹窗
   if (containerToDelete) {
       containerToDelete.remove(); // 移除第一个容器
+      alert("你 过 关 !");
   }
   if (userInput2) {
       alert("你 过 关 !");
