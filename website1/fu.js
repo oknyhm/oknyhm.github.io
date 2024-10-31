@@ -34,6 +34,8 @@ function submitInput() {
   const userInput = document.getElementById('userInput');
   const userInput2 = document.getElementById('userInput2');
   const containerToDelete = document.getElementById('containerToDelete');
+  const container11 = document.getElementById('container11');
+  const container22 = document.getElementById('container22');
   const containerToDelete2 = document.getElementById('containerToDelete2');
 
   //alert("您输入的信息是: " + userInput.value);
@@ -51,9 +53,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   if (containerToDelete) {
       containerToDelete.remove(); // 移除第一个容器
       alert("你 过 关 !");
-  }
-  if (userInput2) {
-      alert("你 过 关 !");
+      container11.style.display = 'flex';
+      container22.style.display = 'flex';
   }
   closePopup2(); // 关闭第二个弹窗
   if (containerToDelete2) {
@@ -64,6 +65,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   closePopup(); // 关闭第一个弹窗
   if (containerToDelete) {
       containerToDelete.remove(); // 移除第一个容器
+      containerToDelete2.style.display = 'flex';
   }
 }
 }
@@ -74,6 +76,8 @@ function submitInput2() {
   const selectedImages = [];
   const userInput2 = document.getElementById('userInput2');
   const containerToDelete2 = document.getElementById('containerToDelete2');
+  const container11 = document.getElementById('container11');
+  const container22 = document.getElementById('container22');
 
   alert("信息分析中......");
 
@@ -90,8 +94,11 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   //if (containerToDelete) {
 //      containerToDelete.remove(); // 移除第一个容器
 //  }
-  if (userInput2) {
+  if (1) {
       alert("你 过 关 !");
+    
+     container22.style.display = 'flex';
+     container11.style.display = 'flex';
   }
   closePopup2(); // 关闭第二个弹窗
   if (containerToDelete2) {
