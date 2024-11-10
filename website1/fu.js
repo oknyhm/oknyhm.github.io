@@ -54,8 +54,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
       containerToDelete.remove(); // 移除第一个容器
       alert("你 过 关 !");
      // console.log('1');
-     var user = "1";
-     setCookie('username',user,1)
+     var user = "666";
+     setCookie('username',user,3)
       container11.style.display = 'flex';
       container22.style.display = 'flex';
   }
@@ -101,8 +101,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
       alert("你 过 关 !");
      // console.log('1');
      //var user=getCookie("username");
-    var user = "1";
-            setCookie('username',user,1)
+    var user = "666";
+            setCookie('username',user,3)
      container22.style.display = 'flex';
      container11.style.display = 'flex';
   }
@@ -123,9 +123,9 @@ tempwindow.location='https://www.bilibili.com/video/BV1ct4y1n7t9/'; // 后更改
   }
 }
 //--------------------------------------------------------------------------
-function setCookie(cname,cvalue,exdays){
+function setCookie(cname,cvalue,exminute){       //单位是分钟!!!
 	var d = new Date();
-	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	d.setTime(d.getTime()+(exminute*60*1000));//1分钟=60000毫秒
 	var expires = "expires="+d.toGMTString();
 	document.cookie = cname+"="+cvalue+"; "+expires;
 }
