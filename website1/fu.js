@@ -53,6 +53,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   if (containerToDelete) {
       containerToDelete.remove(); // 移除第一个容器
       alert("你 过 关 !");
+     // console.log('1');
+      setCookie('username',true,1)
       container11.style.display = 'flex';
       container22.style.display = 'flex';
   }
@@ -96,7 +98,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
 //  }
   if (1) {
       alert("你 过 关 !");
-    
+     // console.log('1');
+            setCookie('username',true,1)
      container22.style.display = 'flex';
      container11.style.display = 'flex';
   }
@@ -107,8 +110,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
 } else {
   alert("准备好光速飞船吧");
 button.remove();
-var newUrl = "https://www.bilibili.com/video/BV1ct4y1n7t9/";
- window.open(newUrl, '_blank');
+var tempwindow=window.open('_blank'); // 先打开页面
+tempwindow.location='https://www.bilibili.com/video/BV1ct4y1n7t9/'; // 后更改页面地址
   window.close();
 
   //closePopup(); // 关闭第一个弹窗
@@ -137,11 +140,23 @@ function getCookie(cname){
 
 // 检查是否有该cookie
 function checkCookie(){
+  const userInput = document.getElementById('userInput');
+  const userInput2 = document.getElementById('userInput2');
+  const containerToDelete = document.getElementById('containerToDelete');
+  const container11 = document.getElementById('container11');
+  const container22 = document.getElementById('container22');
+  const containerToDelete2 = document.getElementById('containerToDelete2');
+
   var use=getCookie("username");
   if (use != ""){ // 不为空处理
-      document.getElementById('popup').style.display = 'none'
+     // document.getElementById('popup4').style.display = 'none'
+     alert("欢迎回来!");
+      closePopup(); // 关闭第一个弹窗
+      containerToDelete.remove(); // 移除第一个容器
+      container11.style.display = 'flex';
+      container22.style.display = 'flex';
   }
   else {// 为空处理
-      document.getElementById('popup').style.display = 'block'
+      //document.getElementById('popup4').style.display = 'block'
   }
 }
