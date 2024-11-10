@@ -55,7 +55,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
       alert("你 过 关 !");
      // console.log('1');
      var user = "666";
-     setCookie('username',user,3)
+     setCookie('username',user,5)
       container11.style.display = 'flex';
       container22.style.display = 'flex';
   }
@@ -102,7 +102,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
      // console.log('1');
      //var user=getCookie("username");
     var user = "666";
-            setCookie('username',user,3)
+            setCookie('username',user,5)
      container22.style.display = 'flex';
      container11.style.display = 'flex';
   }
