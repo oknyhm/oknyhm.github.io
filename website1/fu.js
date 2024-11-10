@@ -151,7 +151,7 @@ function checkCookie(){
 
 	var user=getCookie("username");
 	if (user!=""){
-		alert("欢迎 " + user + " 再次访问");
+		alert("欢迎再次访问");
     containerToDelete.remove(); // 移除第一个容器
     container11.style.display = 'flex';
     container22.style.display = 'flex';
