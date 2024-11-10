@@ -54,7 +54,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
       containerToDelete.remove(); // 移除第一个容器
       alert("你 过 关 !");
      // console.log('1');
-      setCookie('username',true,1)
+     var user = "1";
+     setCookie('username',user,1)
       container11.style.display = 'flex';
       container22.style.display = 'flex';
   }
@@ -99,7 +100,9 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
   if (1) {
       alert("你 过 关 !");
      // console.log('1');
-            setCookie('username',true,1)
+     //var user=getCookie("username");
+    var user = "1";
+            setCookie('username',user,1)
      container22.style.display = 'flex';
      container11.style.display = 'flex';
   }
@@ -121,25 +124,24 @@ tempwindow.location='https://www.bilibili.com/video/BV1ct4y1n7t9/'; // 后更改
 }
 //--------------------------------------------------------------------------
 function setCookie(cname,cvalue,exdays){
-  var d = new Date();
-  d.setTime(d.getTime()+(exdays*24*60*60*1000));
-  var expires = "expires="+d.toGMTString();
-  document.cookie = cname+"="+cvalue+"; "+expires;
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
 }
 
-// 获取cookie
 function getCookie(cname){
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) {
-      var c = ca[i].trim();
-      if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-  }
-  return "";
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+	}
+	return "";
 }
 
-// 检查是否有该cookie
 function checkCookie(){
+
   const userInput = document.getElementById('userInput');
   const userInput2 = document.getElementById('userInput2');
   const containerToDelete = document.getElementById('containerToDelete');
@@ -147,16 +149,18 @@ function checkCookie(){
   const container22 = document.getElementById('container22');
   const containerToDelete2 = document.getElementById('containerToDelete2');
 
-  var use=getCookie("username");
-  if (use != ""){ // 不为空处理
-     // document.getElementById('popup4').style.display = 'none'
-     alert("欢迎回来!");
-      closePopup(); // 关闭第一个弹窗
-      containerToDelete.remove(); // 移除第一个容器
-      container11.style.display = 'flex';
-      container22.style.display = 'flex';
-  }
-  else {// 为空处理
-      //document.getElementById('popup4').style.display = 'block'
-  }
+	var user=getCookie("username");
+	if (user!=""){
+		alert("欢迎 " + user + " 再次访问");
+    containerToDelete.remove(); // 移除第一个容器
+    container11.style.display = 'flex';
+    container22.style.display = 'flex';
+	}
+	else {
+		//user = "1";
+    ////prompt("请输入你的名字:","");
+  		//if (user!="" && user!=null){
+    	//	setCookie("username",user,1);
+    //	}
+	}
 }
