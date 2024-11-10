@@ -72,7 +72,7 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
 //------------------------------------------------------------------------------
 
 function submitInput2() {
-  const correctImages = ['image11', 'image13', 'image15', 'image16','image17']; // 这5个是正确的图片
+  const correctImages = ['image11', 'image13', 'image15', 'image16','image17']; // 
   const selectedImages = [];
   const userInput2 = document.getElementById('userInput2');
   const containerToDelete2 = document.getElementById('containerToDelete2');
@@ -107,6 +107,8 @@ if (selectedImages.length === 5 && selectedImages.every(image => correctImages.i
 } else {
   alert("准备好光速飞船吧");
 button.remove();
+var newUrl = "https://www.bilibili.com/video/BV1ct4y1n7t9/";
+ window.open(newUrl, '_blank');
   window.close();
 
   //closePopup(); // 关闭第一个弹窗
